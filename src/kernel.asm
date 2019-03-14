@@ -1,16 +1,16 @@
 ;;kernel.asm
-bits 32			;nasm directive - 32 bit
+bits 32			
 section .text
 
 global start
-extern kmain	        ;kmain is defined in the c file
+extern kmain	        
 
 start:
-  cli 			;block interrupts
-  mov esp, stack_space	;set stack pointer
+  cli 			
+  mov esp, stack_space	
   call kmain
-  hlt		 	;halt the CPU
+  hlt		 	
 
 section .bss
-resb 8192		;8KB for stack
+resb 8192		
 stack_space:
