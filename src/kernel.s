@@ -1,4 +1,4 @@
-;;kernel.asm
+.set MAGIC,  0x10BEF045 
 bits 32			
 section .text
 
